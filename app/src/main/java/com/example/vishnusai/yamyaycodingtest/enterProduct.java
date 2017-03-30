@@ -1,6 +1,5 @@
 package com.example.vishnusai.yamyaycodingtest;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,44 +11,31 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class enterProduct extends AppCompatActivity {
+
 
     EditText productEntry;
     Button saveProduct;
     DatabaseReference databaseProducts;
-    Button findPage;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-       // productEntry = (EditText) findViewById(R.id.productEntry);
+        setContentView(R.layout.activity_enter_product);
+        productEntry = (EditText) findViewById(R.id.productEntry);
         saveProduct = (Button) findViewById(R.id.saveProduct);
-        findPage = (Button) findViewById(R.id.findProduct);
         databaseProducts = FirebaseDatabase.getInstance().getReference("products");
 
-        saveProduct.setOnClickListener(new View.OnClickListener(){
+        saveProduct.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                //addProduct();
-                Intent go =new Intent(MainActivity.this, enterProduct.class);
-                startActivity(go);
+            public void onClick(View view) {
 
+                addProduct();
             }
         });
-        findPage.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent go = new Intent(MainActivity.this, Main2Activity.class);
-                startActivity(go);
-            }
-        });
-
     }
 
-    /*private void addProduct(){
+    private void addProduct(){
         String productName = productEntry.getText().toString().trim();
         if(!TextUtils.isEmpty(productName)){
             String id = databaseProducts.push().getKey();
@@ -61,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         }else {
             Toast.makeText(this, "please enter a product",Toast.LENGTH_LONG).show();
         }
-    }*/
+    }
+
+
 }
-
-

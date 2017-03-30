@@ -1,13 +1,15 @@
 package com.example.vishnusai.yamyaycodingtest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,7 +42,7 @@ public class Main2Activity extends AppCompatActivity {
         listViewProducts = (ListView)findViewById(R.id.listViewProducts);
         productListArray = new ArrayList<>();
         mFireBaseDatabase = FirebaseDatabase.getInstance();
-        searchText = (EditText)findViewById(R.id.pName);
+        searchText = (EditText)findViewById(R.id.productEntry);
         search = (Button)findViewById(R.id.searchList);
         myRef = mFireBaseDatabase.getReference();
 
@@ -52,6 +54,8 @@ public class Main2Activity extends AppCompatActivity {
                 displayItems(searchText.getText().toString());
             }
         });
+
+
 
     }
 
@@ -73,7 +77,7 @@ public class Main2Activity extends AppCompatActivity {
                 for (DataSnapshot productSnapshot : dataSnapshot.getChildren()) {
                     //Log.v(databaseList.toString(),"Hiiiiiiiiiiiiiii");
                     product p = productSnapshot.getValue(product.class);
-                    Log.v(databaseList.toString(),"Hiiiiiiiiiiiiiii"+Search);
+
                     if((p.pname).contains(""+Search))
                     productListArray.add(p);
                 }
@@ -83,6 +87,22 @@ public class Main2Activity extends AppCompatActivity {
                 //Log.v(productListArray.toString(),"after adapter List array "+productListArray.toString());
                 //Log.v(String.valueOf(adapter),"after adapter List array "+String.valueOf(adapter));
                 listViewProducts.setAdapter(adapter);
+
+                listViewProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        int itemposition = position;
+                        //Log.v(databaseList.toString(),"Hiiiiiiiiiiiiiii "+itemposition);
+                        product value = (product) listViewProducts.getItemAtPosition(position);
+                        String sample = value.pname.toString();
+                        //Log.v(databaseList.toString(),sample);
+                        Toast.makeText(Main2Activity.this, ""+value.pname, Toast.LENGTH_SHORT).show();
+                        Intent productFinalPage = new Intent(Main2Activity.this, finalProductPage.class);
+                        productFinalPage.putExtra("productName",sample);
+                        startActivity(productFinalPage);
+
+                    }
+                });
                 //Log.v(productListArray.toString(),"after setting adapter List array "+productListArray.toString());
             }
 

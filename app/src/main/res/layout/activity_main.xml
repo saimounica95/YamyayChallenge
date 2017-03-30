@@ -12,48 +12,43 @@
     <RelativeLayout
         android:layout_width="400dp"
         android:layout_height="593dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="5dp">
 
         <Button
             android:id="@+id/saveProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Save"
-            tools:layout_editor_absoluteX="132dp"
-            tools:layout_editor_absoluteY="290dp"
-            android:layout_marginEnd="53dp"
-            android:layout_marginTop="24dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:id="@+id/productEntry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="232dp"
             android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="29dp"
-            android:layout_marginEnd="9dp"
-            android:layout_alignBottom="@+id/saveProduct"
-            android:layout_toStartOf="@+id/saveProduct" />
+            android:text="Save Product"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="290dp" />
 
         <Button
             android:id="@+id/findProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/saveProduct"
+            android:layout_below="@+id/saveProduct"
+            android:layout_marginTop="89dp"
             android:layout_weight="1"
-            android:text="find"
+            android:text="Find Product"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp"
-            android:layout_marginEnd="15dp"
-            android:layout_below="@+id/productEntry"
-            android:layout_alignEnd="@+id/productEntry"
-            android:layout_marginTop="92dp" />
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Welcome to The Application"
+            android:textSize="25dp"/>
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
