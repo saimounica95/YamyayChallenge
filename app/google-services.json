@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1011339047632",
+    "firebase_url": "https://yamyaycodingtest.firebaseio.com",
+    "project_id": "yamyaycodingtest",
+    "storage_bucket": "yamyaycodingtest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011339047632:android:34cfbadaf6fb353b",
+        "android_client_info": {
+          "package_name": "com.example.vishnusai.yamyaycodingtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011339047632-hv8keedbbuihkg7l5c2es2sfbunco6fg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vishnusai.yamyaycodingtest",
+            "certificate_hash": "4217e43b88843b65fedbee45d72ee22132e22fa6"
+          }
+        },
+        {
+          "client_id": "1011339047632-scpsa31r90aeppblkv99cna2esa9vhfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAbgte-89koxN-vCusuRJmKqu3eoR5k6g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011339047632-scpsa31r90aeppblkv99cna2esa9vhfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
