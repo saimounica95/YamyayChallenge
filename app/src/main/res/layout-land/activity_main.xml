@@ -19,25 +19,25 @@
             android:id="@+id/saveProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="232dp"
+            android:layout_marginTop="49dp"
             android:layout_weight="1"
             android:text="Save Product"
             tools:layout_editor_absoluteX="132dp"
-            tools:layout_editor_absoluteY="290dp" />
+            tools:layout_editor_absoluteY="290dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:id="@+id/findProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/saveProduct"
-            android:layout_below="@+id/saveProduct"
-            android:layout_marginTop="89dp"
+            android:layout_marginTop="55dp"
             android:layout_weight="1"
             android:text="Find Product"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_below="@+id/saveProduct"
+            android:layout_alignEnd="@+id/saveProduct" />
 
         <TextView
             android:id="@+id/textView"

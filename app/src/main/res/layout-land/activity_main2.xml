@@ -7,10 +7,10 @@
     tools:context="com.example.vishnusai.yamyaycodingtest.Main2Activity">
 
     <RelativeLayout
-        android:layout_width="389dp"
-        android:layout_height="590dp"
+        android:layout_width="672dp"
+        android:layout_height="598dp"
         tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="6dp">
+        tools:layout_editor_absoluteY="-3dp">
 
         <EditText
             android:id="@+id/productEntry"
@@ -38,11 +38,12 @@
 
         <ListView
             android:id="@+id/listViewProducts"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_below="@+id/productEntry"
-            android:layout_marginTop="8dp" />
+            android:layout_marginEnd="9dp"
+            android:layout_marginTop="10dp" />
 
     </RelativeLayout>
 

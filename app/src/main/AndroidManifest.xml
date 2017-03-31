@@ -19,7 +19,8 @@
         <activity android:name=".Main2Activity" />
         <activity android:name=".enterProduct" />
         <activity android:name=".productListView" />
-        <activity android:name=".finalProductPage"></activity>
+        <activity android:name=".finalProductPage" />
+        <activity android:name=".checkoutPage"></activity>
     </application>
 
 </manifest>

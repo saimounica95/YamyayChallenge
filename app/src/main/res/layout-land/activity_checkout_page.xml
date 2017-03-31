@@ -7,23 +7,23 @@
     tools:context="com.example.vishnusai.yamyaycodingtest.checkoutPage">
 
     <RelativeLayout
-        android:layout_width="407dp"
-        android:layout_height="596dp"
+        android:layout_width="483dp"
+        android:layout_height="611dp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="25dp">
+        tools:layout_editor_absoluteY="4dp">
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editText5"
+            android:layout_below="@+id/textView3"
             android:layout_marginEnd="19dp"
             android:layout_marginTop="74dp"
             android:ems="10"
             android:inputType="number"
             tools:layout_editor_absoluteX="45dp"
-            tools:layout_editor_absoluteY="117dp"
-            android:layout_below="@+id/textView3"
-            android:layout_alignEnd="@+id/editText5" />
+            tools:layout_editor_absoluteY="117dp" />
 
         <TextView
             android:id="@+id/cardNumber"
@@ -50,17 +50,17 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="67dp"
-            android:text="Expiry Date"
+            android:layout_alignStart="@+id/cardNumber"
             android:layout_below="@+id/cardNumber"
-            android:layout_alignStart="@+id/cardNumber" />
+            android:layout_marginTop="67dp"
+            android:text="Expiry Date" />
 
         <EditText
             android:id="@+id/month"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/textView4"
-            android:layout_alignStart="@+id/editText"
+            android:layout_toEndOf="@+id/textView7"
             android:ems="10"
             android:inputType="number" />
 
@@ -79,7 +79,6 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/year"
             android:layout_alignBottom="@+id/year"
-            android:layout_marginEnd="11dp"
             android:layout_toStartOf="@+id/year"
             android:text="/"
             android:textSize="25dp" />
@@ -98,37 +97,36 @@
             android:id="@+id/CVV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CVV"
             android:layout_alignBaseline="@+id/year"
             android:layout_alignBottom="@+id/year"
-            android:layout_toEndOf="@+id/submit" />
+            android:layout_toEndOf="@+id/submit"
+            android:text="CVV" />
 
         <Button
             android:id="@+id/submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="105dp"
-            android:text="Submit"
-            android:layout_below="@+id/year"
-            android:layout_toEndOf="@+id/month" />
+            android:layout_alignStart="@+id/year"
+            android:layout_below="@+id/editText5"
+            android:text="Submit" />
 
         <EditText
             android:id="@+id/nameOnCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:layout_alignBottom="@+id/textView7"
-            android:layout_alignStart="@+id/editText" />
+            android:layout_alignStart="@+id/editText"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name on Card"
-            android:layout_above="@+id/cardNumber"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="23dp" />
+            android:layout_alignEnd="@+id/cardNumber"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="32dp"
+            android:text="Name on Card" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
